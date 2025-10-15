@@ -1,10 +1,29 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Plane, Calendar, MapPin, Clock, TrendingUp, Sparkles, DollarSign, Info, Cloud, Navigation, Users, Shield } from "lucide-react";
+import {
+  Plane,
+  Calendar,
+  MapPin,
+  Clock,
+  TrendingUp,
+  Sparkles,
+  DollarSign,
+  Info,
+  Cloud,
+  Navigation,
+  Users,
+  Shield,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { motion } from "framer-motion";
@@ -96,14 +115,15 @@ export default function FlightPricePredictor() {
           >
             <div className="relative">
               <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-md"></div>
-              <Plane className="relative text-blue-400 w-12 h-12 md:w-16 md:h-16 transform rotate-45" />
+              <Plane className="relative text-blue-400 w-12 h-12 md:w-16 md:h-16 pb-3 transform rotate-45" />
             </div>
-            <h1 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+            <h1 className="text-3xl md:text-5xl font-bold bg-gradient-to-r  pb-3  from-blue-400 to-cyan-300 bg-clip-text text-transparent">
               Flight Price Predictor
             </h1>
           </motion.div>
           <p className="text-blue-200/80 text-lg md:text-xl max-w-2xl mx-auto">
-            Smart predictions for your next journey. Find the best time to book and save money.
+            Smart predictions for your next journey. Find the best time to book
+            and save money.
           </p>
         </div>
 
@@ -134,7 +154,11 @@ export default function FlightPricePredictor() {
                   </SelectTrigger>
                   <SelectContent className="bg-slate-800 border-blue-400/30 text-white">
                     {airlines.map((a) => (
-                      <SelectItem key={a} value={a} className="text-base focus:bg-blue-600/50">
+                      <SelectItem
+                        key={a}
+                        value={a}
+                        className="text-base focus:bg-blue-600/50"
+                      >
                         {formatLabel(a)}
                       </SelectItem>
                     ))}
@@ -153,7 +177,11 @@ export default function FlightPricePredictor() {
                   </SelectTrigger>
                   <SelectContent className="bg-slate-800 border-blue-400/30 text-white">
                     {cabinClasses.map((c) => (
-                      <SelectItem key={c} value={c} className="text-base focus:bg-blue-600/50">
+                      <SelectItem
+                        key={c}
+                        value={c}
+                        className="text-base focus:bg-blue-600/50"
+                      >
                         {formatLabel(c)}
                       </SelectItem>
                     ))}
@@ -172,7 +200,11 @@ export default function FlightPricePredictor() {
                   </SelectTrigger>
                   <SelectContent className="bg-slate-800 border-blue-400/30 text-white">
                     {cities.map((c) => (
-                      <SelectItem key={c} value={c} className="text-base focus:bg-blue-600/50">
+                      <SelectItem
+                        key={c}
+                        value={c}
+                        className="text-base focus:bg-blue-600/50"
+                      >
                         {c}
                       </SelectItem>
                     ))}
@@ -185,13 +217,19 @@ export default function FlightPricePredictor() {
                   <MapPin className="w-4 h-4 text-blue-300" />
                   Destination City
                 </Label>
-                <Select onValueChange={(v) => handleChange("destination_city", v)}>
+                <Select
+                  onValueChange={(v) => handleChange("destination_city", v)}
+                >
                   <SelectTrigger className="bg-slate-700/50 border-blue-400/30 text-white h-12 text-base hover:bg-slate-700/70 transition-colors">
                     <SelectValue placeholder="Select Destination" />
                   </SelectTrigger>
                   <SelectContent className="bg-slate-800 border-blue-400/30 text-white">
                     {cities.map((c) => (
-                      <SelectItem key={c} value={c} className="text-base focus:bg-blue-600/50">
+                      <SelectItem
+                        key={c}
+                        value={c}
+                        className="text-base focus:bg-blue-600/50"
+                      >
                         {c}
                       </SelectItem>
                     ))}
@@ -204,13 +242,19 @@ export default function FlightPricePredictor() {
                   <Clock className="w-4 h-4 text-blue-300" />
                   Departure Time
                 </Label>
-                <Select onValueChange={(v) => handleChange("departure_time", v)}>
+                <Select
+                  onValueChange={(v) => handleChange("departure_time", v)}
+                >
                   <SelectTrigger className="bg-slate-700/50 border-blue-400/30 text-white h-12 text-base hover:bg-slate-700/70 transition-colors">
                     <SelectValue placeholder="Select Time" />
                   </SelectTrigger>
                   <SelectContent className="bg-slate-800 border-blue-400/30 text-white">
                     {departureTimes.map((t) => (
-                      <SelectItem key={t} value={t} className="text-base focus:bg-blue-600/50">
+                      <SelectItem
+                        key={t}
+                        value={t}
+                        className="text-base focus:bg-blue-600/50"
+                      >
                         {formatLabel(t)}
                       </SelectItem>
                     ))}
@@ -227,7 +271,9 @@ export default function FlightPricePredictor() {
                   type="number"
                   min={0}
                   value={form.days_before_departure}
-                  onChange={(e) => handleChange("days_before_departure", +e.target.value)}
+                  onChange={(e) =>
+                    handleChange("days_before_departure", +e.target.value)
+                  }
                   className="bg-slate-700/50 border-blue-400/30 text-white h-12 text-base focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 />
               </div>
@@ -279,10 +325,15 @@ export default function FlightPricePredictor() {
                     <div className="p-2 bg-green-500/20 rounded-lg">
                       <DollarSign className="text-green-400 w-6 h-6" />
                     </div>
-                    Predicted Price: <span className="text-green-400">₹{result.predicted_price.toLocaleString("en-IN")}</span>
+                    Predicted Price:{" "}
+                    <span className="text-green-400">
+                      ₹{result.predicted_price.toLocaleString("en-IN")}
+                    </span>
                   </h2>
                   <div className="px-3 py-1 bg-blue-500/20 rounded-full border border-blue-400/30">
-                    <span className="text-blue-300 text-sm font-medium">AI Powered</span>
+                    <span className="text-blue-300 text-sm font-medium">
+                      AI Powered
+                    </span>
                   </div>
                 </div>
 
@@ -290,24 +341,32 @@ export default function FlightPricePredictor() {
                   <div className="space-y-4">
                     <div className="flex items-start gap-3 p-3 bg-blue-500/10 rounded-lg border border-blue-400/20">
                       <Info className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                      <p className="text-blue-100 text-base">{result.booking_insight}</p>
+                      <p className="text-blue-100 text-base">
+                        {result.booking_insight}
+                      </p>
                     </div>
 
                     <div className="flex items-start gap-3 p-3 bg-amber-500/10 rounded-lg border border-amber-400/20">
                       <TrendingUp className="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0" />
-                      <p className="text-amber-100 text-base">{result.price_trend}</p>
+                      <p className="text-amber-100 text-base">
+                        {result.price_trend}
+                      </p>
                     </div>
                   </div>
 
                   <div className="space-y-4">
                     <div className="flex items-start gap-3 p-3 bg-purple-500/10 rounded-lg border border-purple-400/20">
                       <Sparkles className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
-                      <p className="text-purple-100 text-base">Confidence: {result.model_confidence}</p>
+                      <p className="text-purple-100 text-base">
+                        Confidence: {result.model_confidence}
+                      </p>
                     </div>
 
                     <div className="flex items-start gap-3 p-3 bg-green-500/10 rounded-lg border border-green-400/20">
                       <DollarSign className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                      <p className="text-green-100 text-base">{result.savings_tip}</p>
+                      <p className="text-green-100 text-base">
+                        {result.savings_tip}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -323,37 +382,61 @@ export default function FlightPricePredictor() {
                     <div className="space-y-3">
                       <div className="flex justify-between items-center py-2 border-b border-blue-400/10">
                         <span className="text-blue-200 font-medium">Route</span>
-                        <span className="text-white font-semibold">{result.flight_details.route}</span>
+                        <span className="text-white font-semibold">
+                          {result.flight_details.route}
+                        </span>
                       </div>
                       <div className="flex justify-between items-center py-2 border-b border-blue-400/10">
-                        <span className="text-blue-200 font-medium">Airline</span>
-                        <span className="text-white font-semibold">{result.flight_details.airline}</span>
+                        <span className="text-blue-200 font-medium">
+                          Airline
+                        </span>
+                        <span className="text-white font-semibold">
+                          {result.flight_details.airline}
+                        </span>
                       </div>
                       <div className="flex justify-between items-center py-2 border-b border-blue-400/10">
-                        <span className="text-blue-200 font-medium">Departure</span>
-                        <span className="text-white font-semibold">{result.flight_details.departure_time}</span>
+                        <span className="text-blue-200 font-medium">
+                          Departure
+                        </span>
+                        <span className="text-white font-semibold">
+                          {result.flight_details.departure_time}
+                        </span>
                       </div>
                       <div className="flex justify-between items-center py-2 border-b border-blue-400/10">
                         <span className="text-blue-200 font-medium">Class</span>
-                        <span className="text-white font-semibold">{result.flight_details.class}</span>
+                        <span className="text-white font-semibold">
+                          {result.flight_details.class}
+                        </span>
                       </div>
                     </div>
                     <div className="space-y-3">
                       <div className="flex justify-between items-center py-2 border-b border-blue-400/10">
                         <span className="text-blue-200 font-medium">Date</span>
-                        <span className="text-white font-semibold">{result.flight_details.flight_date}</span>
+                        <span className="text-white font-semibold">
+                          {result.flight_details.flight_date}
+                        </span>
                       </div>
                       <div className="flex justify-between items-center py-2 border-b border-blue-400/10">
-                        <span className="text-blue-200 font-medium">Distance</span>
-                        <span className="text-white font-semibold">{result.flight_details.distance_km} km</span>
+                        <span className="text-blue-200 font-medium">
+                          Distance
+                        </span>
+                        <span className="text-white font-semibold">
+                          {result.flight_details.distance_km} km
+                        </span>
                       </div>
                       <div className="flex justify-between items-center py-2 border-b border-blue-400/10">
                         <span className="text-blue-200 font-medium">Stops</span>
-                        <span className="text-white font-semibold">{result.flight_details.stops}</span>
+                        <span className="text-white font-semibold">
+                          {result.flight_details.stops}
+                        </span>
                       </div>
                       <div className="flex justify-between items-center py-2 border-b border-blue-400/10">
-                        <span className="text-blue-200 font-medium">Days Before</span>
-                        <span className="text-white font-semibold">{result.flight_details.days_before_departure}</span>
+                        <span className="text-blue-200 font-medium">
+                          Days Before
+                        </span>
+                        <span className="text-white font-semibold">
+                          {result.flight_details.days_before_departure}
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -366,11 +449,11 @@ export default function FlightPricePredictor() {
         {/* Footer note */}
         <div className="text-center mt-8">
           <p className="text-blue-300/60 text-sm">
-            Powered by advanced machine learning • Real-time price predictions • Travel smarter
+            Powered by advanced machine learning • Real-time price predictions •
+            Travel smarter
           </p>
         </div>
       </motion.div>
     </div>
   );
 }
-
