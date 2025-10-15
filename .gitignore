@@ -214,3 +214,4 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+flight_price_prediction_model/stages/
