@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.OneHotEncoderModel","timestamp":1760507999886,"sparkVersion":"4.0.0","uid":"OneHotEncoder_d62fc63e89b6","paramMap":{"outputCol":"airline_encoded","inputCol":"airline_index"},"defaultParamMap":{"outputCol":"OneHotEncoder_d62fc63e89b6__output","handleInvalid":"error","dropLast":true}}

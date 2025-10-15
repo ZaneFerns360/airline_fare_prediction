@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.OneHotEncoderModel","timestamp":1760508000246,"sparkVersion":"4.0.0","uid":"OneHotEncoder_2643031cb452","paramMap":{"inputCol":"departure_time_index","outputCol":"departure_time_encoded"},"defaultParamMap":{"dropLast":true,"handleInvalid":"error","outputCol":"OneHotEncoder_2643031cb452__output"}}

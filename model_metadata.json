@@ -1,0 +1,37 @@
+{
+  "valid_airlines": [
+    "AirAsia_India",
+    "Air_India",
+    "Akasa_Air",
+    "IndiGo",
+    "SpiceJet",
+    "Vistara"
+  ],
+  "valid_cities": [
+    "Ahmedabad",
+    "Bangalore",
+    "Bhubaneswar",
+    "Chandigarh",
+    "Chennai",
+    "Coimbatore",
+    "Delhi",
+    "Goa",
+    "Hyderabad",
+    "Indore",
+    "Jaipur",
+    "Kochi",
+    "Kolkata",
+    "Lucknow",
+    "Mumbai",
+    "Nagpur",
+    "Patna",
+    "Pune",
+    "Srinagar",
+    "Varanasi"
+  ],
+  "rmse": 998.2207390251992,
+  "mae": 497.2235479665465,
+  "r2": 0.96728458795138,
+  "training_date": "2025-01-01",
+  "total_flights_trained": 34623
+}
